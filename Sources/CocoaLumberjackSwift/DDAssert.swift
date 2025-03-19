@@ -49,7 +49,7 @@ public func DDAssert(_ condition: @autoclosure () -> Bool,
                    tag: tag,
                    asynchronous: async,
                    ddlog: ddlog)
-        Swift.assertionFailure(message().formatted, file: file, line: line)
+        Swift.assertionFailure(message().formatted)
     }
 }
 
@@ -79,7 +79,7 @@ public func DDAssertionFailure(_ message: @autoclosure () -> DDLogMessageFormat 
                tag: tag,
                asynchronous: async,
                ddlog: ddlog)
-    Swift.assertionFailure(message().formatted, file: file, line: line)
+    Swift.assertionFailure(message().formatted)
 }
 
 /**
@@ -114,7 +114,7 @@ public func DDAssert(_ condition: @autoclosure () -> Bool,
                    tag: tag,
                    asynchronous: async,
                    ddlog: ddlog)
-        Swift.assertionFailure(message(), file: file, line: line)
+        Swift.assertionFailure(message())
     }
 }
 
@@ -145,5 +145,5 @@ public func DDAssertionFailure(_ message: @autoclosure () -> String = "",
                tag: tag,
                asynchronous: async,
                ddlog: ddlog)
-    Swift.assertionFailure(message(), file: file, line: line)
+    Swift.assertionFailure(message())
 }
